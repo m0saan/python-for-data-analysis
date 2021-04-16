@@ -1,4 +1,6 @@
 import re
+import matplotlib.pyplot as plt
+
 
 def clean_strings(strings):
     result = []
@@ -10,8 +12,20 @@ def clean_strings(strings):
     return result
 
 
+def blur_image():
+    img = plt.imread('dc_metro.png')
+    plt.imshow(img, cmap=plt.cm.hot)
+
+    blurred = 0
+
+    plt.figure()
+    plt.imshow(blurred, cmd=plt.cm.hot)
+
+    plt.show()
+
 
 states = ['   Alabama ', 'Georgia!', 'Georgia', 'georgia',
           'FlOrIda', 'south   carolina##', 'West virginia?']
 
-print(clean_strings(states))
+# print(clean_strings(states))
+blur_image()
